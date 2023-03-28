@@ -1,8 +1,34 @@
 ﻿@{
     ViewData["Title"] = "Hobbies";
+    var hobbies = new List<string>()
+    {
+        "Read Books",
+        "Play Video Games",
+        "Listen To Music"
+    };
 }
 
+
+
 <div class="text-center">
-    <h1 class="display-4">Hobbies</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-37">Hobbies</h1>
+    
 </div>
+<p>I like to:</a>.</p>
+
+@foreach (var item in hobbies)
+{
+    <p>@item</p>
+    if (item == "Read Books")
+    {
+        <img src="~/Books.jpg" width="600px"/>
+    }
+    else if (item == "Play Video Games")
+    {
+        <img src="~/RDR2.png" width="600px" />
+    }
+    else
+    {
+        <img src="~/LZ.jpg" width="600px" />
+    }
+}
